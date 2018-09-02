@@ -5,9 +5,6 @@
 
 _*Note: Use shift to select a rectangular area_
 
-
-
-
-Maze Generation Algorithms:
+## Maze Generation Algorithms
 
 https://en.wikipedia.org/wiki/Maze_generation_algorithm
