@@ -25,6 +25,7 @@ import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
 import com.mazerunner.objects.Tile;
+import com.mazerunner.objects.Walker;
 
 public class Window extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
@@ -55,7 +56,7 @@ public class Window extends JFrame implements ActionListener {
 
 	private void initMenuBar() {
 		JMenuBar bar = new JMenuBar();
-		JMenu menu = new JMenu("Opções");
+		JMenu menu = new JMenu("Opï¿½ï¿½es");
 
 		JMenuItem item;
 		item = new JMenuItem("Import map...");
@@ -105,7 +106,7 @@ public class Window extends JFrame implements ActionListener {
 		btn.addActionListener(this);
 		toolBar.add(btn);
 
-		toolBar.add(Box.createHorizontalGlue());
+		// toolBar.add(Box.createHorizontalGlue());
 		toolBar.addSeparator();
 
 		checkBox = new JCheckBox("Grid");
@@ -119,7 +120,7 @@ public class Window extends JFrame implements ActionListener {
 		checkBox.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
 		checkBox.setSelected(false);
 		checkBox.addItemListener((ItemEvent e) -> {
-			game.toggleWalkerTrail(((JCheckBox) e.getItem()).isSelected());
+			Walker.showTrail = ((JCheckBox) e.getItem()).isSelected();
 		});
 		toolBar.add(checkBox);
 

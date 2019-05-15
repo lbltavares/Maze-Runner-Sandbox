@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Stack;
 
-import com.mazerunner.ui.GameCanvas;
-
 public class Walker {
+
+	public static boolean showTrail = false;
 
 	private GameMap map;
 
@@ -18,9 +18,8 @@ public class Walker {
 	private boolean[][] stepsMap;
 	private int mapWidth, mapHeight;
 	private Point pos;
-	private boolean showTrail = false;
 
-	public Walker(GameCanvas game, GameMap map, int x, int y) {
+	public Walker(GameMap map, int x, int y) {
 		this.map = map;
 		steps = new Stack<>();
 		pos = new Point(x, y);

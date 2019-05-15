@@ -48,12 +48,6 @@ public class GameCanvas extends Canvas implements Runnable, MouseListener, Mouse
 		paused = !paused;
 	}
 
-	public void toggleWalkerTrail(boolean b) {
-		for (int i = 0; i < walkers.size(); i++) {
-			walkers.get(i).toggleTrail(b);
-		}
-	}
-
 	public void setSelectionType(String str) {
 		setSelectionType(Tile.Type.valueOf(str));
 	}
@@ -122,7 +116,7 @@ public class GameCanvas extends Canvas implements Runnable, MouseListener, Mouse
 				return;
 			}
 		}
-		walkers.add(new Walker(this, map, x, y));
+		walkers.add(new Walker(map, x, y));
 	}
 
 	public int mouseToCol() {
